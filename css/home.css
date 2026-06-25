@@ -254,7 +254,7 @@ body {
 .hero-badge {
     position: absolute;
     bottom: 80px;
-    left: -8px;
+    left: 70px;
     background: #fff;
     border-radius: 12px;
     box-shadow: 0 8px 28px rgba(15,23,42,0.12);
@@ -292,20 +292,23 @@ body {
 }
 
 /* Badge flotante "2.000+ pacientes" */
-.hero-badge-2 {
-    position: absolute;
-    top: 80px;
-    right: 24px;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 8px 28px rgba(15,23,42,0.10);
-    padding: 0.7rem 1.1rem;
-    display: flex;
-    align-items: center;
-    gap: 0.55rem;
-    border-left: 3px solid var(--primary);
-    z-index: 3;
-    white-space: nowrap;
+.hero-badge-2{
+    position:absolute;
+    top:90px;
+    right:-25px;
+
+    background:#fff;
+    padding:1rem 1.4rem;
+    border-radius:18px;
+
+    box-shadow:
+        0 20px 45px rgba(15,23,42,.15);
+
+    display:flex;
+    align-items:center;
+    gap:.8rem;
+
+    z-index:20;
 }
 .hero-badge-2 .badge-icon {
     color: var(--primary);
