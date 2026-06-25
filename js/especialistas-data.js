@@ -1,8 +1,8 @@
-const SPECIALIST = [
+const SPECIALISTS = [
     {
         nombre: "Lizeth Durán Bello",
         especialidad: "Ortodoncia y Ortopedia Dento Facial",
-        imagen: "../assets/img/Lizeth-Duran.jpd"
+        imagen: "../assets/img/Lizeth-Duran.jpg"
     },
     {
         nombre: "Laura Melo",
