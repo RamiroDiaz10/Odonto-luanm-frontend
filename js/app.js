@@ -896,7 +896,7 @@ const initServices = () => {
   SERVICES.forEach((service, index) => {
     const isReverse = index % 2 !== 0;
 
-    const card = document.createElement("div");
+    const card = document.createElement("article");
     card.className = `servicio-card ${isReverse ? "reverse" : ""}`;
 
     card.innerHTML = `
@@ -905,8 +905,39 @@ const initServices = () => {
         <p class="servicio-card__text">${service.descripcion}</p>
       </div>
 
-      <div class="servicio-card__image">
+      <figure class="servicio-card__image">
         <img src="${service.imagen}" alt="${service.titulo}">
+      </figure>
+    `;
+
+    container.appendChild(card);
+  });
+};
+
+const initSpecialists = () => {
+  const container = document.getElementById("especialistas-container");
+
+  if (!container || typeof SPECIALISTS === undefined) return;
+
+  SPECIALISTS.forEach((specialist) => {
+    const card = document.createElement("article");
+    card.className = "especialistas-card";
+
+    card.innerHTML = `
+      <figure class="especialista-card__image">
+          <img
+            src="${specialist.imagen}"
+            alt="${specialist.nombre}">
+      </figure>
+
+      <div class="especialista-card__body">
+          <h3 class="especialista-card__name">
+              ${specialist.nombre}
+          </h3>
+
+          <p class="especialista-card__specialty">
+              ${specialist.especialidad}
+          </p>
       </div>
     `;
 
@@ -926,6 +957,7 @@ const initApp = async () => {
   initSecretaryAppointments();
   initAdminDashboard();
   initServices();
+  initSpecialists();
 };
 
 initApp().catch((error) => {
