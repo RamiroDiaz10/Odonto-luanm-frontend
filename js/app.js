@@ -112,6 +112,14 @@ const initServices = () => {
   });
 };
 
+const initSpecialists = () => {
+  const container = document.getElementById("especialistas-container");
+
+  if(!container || typeof SPECIALISTS === undefined) return;
+
+  SPECIALISTS.forEach
+}
+
 const initApp = async () => {
   await loadComponents();
   initNavbar();
